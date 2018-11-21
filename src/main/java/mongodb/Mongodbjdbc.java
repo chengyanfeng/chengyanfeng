@@ -15,10 +15,10 @@ import java.util.List;
 public class Mongodbjdbc {
     private static final Logger logger = LoggerFactory
             .getLogger(Mongodbjdbc.class);
+    public static MongoDatabase mongoDatabase = null;
 
     //获取mongo链接
-    public static  MongoDatabase MongoConnet() {
-        MongoDatabase mongoDatabase = null;
+    private static MongoDatabase MongoConnet() {
         try {
             //连接到MongoDB服务 如果是远程连接可以替换“localhost”为服务器所在IP地址
             //ServerAddress()两个参数分别为 服务器地址 和 端口
@@ -37,6 +37,7 @@ public class Mongodbjdbc {
             //连接到数据库
             mongoDatabase = mongoClient.getDatabase("sj_data");
 
+
         } catch (Exception e) {
             logger.error("数据库链接失败");
             e.printStackTrace();
@@ -47,6 +48,14 @@ public class Mongodbjdbc {
         return mongoDatabase;
 
 
+    }
+
+    public static MongoDatabase MongGetDom() {
+        if (mongoDatabase == null) {
+            mongoDatabase = MongoConnet();
+
+        }
+        return mongoDatabase;
     }
 
     //关闭mongo链接
