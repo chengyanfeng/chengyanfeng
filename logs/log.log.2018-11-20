@@ -1,0 +1,711 @@
+2018-11-20 16:29:32  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:29:32  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.136:9999 to client view of cluster
+2018-11-20 16:29:32  [ main:93 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:29:32  [ main:110 ] - [ INFO ]  数据库成功链接
+2018-11-20 16:29:32  [ main:129 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:29:33  [ cluster-ClusterId{value='5bf3c5ec6c0b767ec804292c', description='null'}-47.97.3.136:9999:1463 ] - [ INFO ]  Opened connection [connectionId{localValue:1, serverValue:12}] to 47.97.3.136:9999
+2018-11-20 16:29:33  [ cluster-ClusterId{value='5bf3c5ec6c0b767ec804292c', description='null'}-47.97.3.136:9999:1463 ] - [ DEBUG ]  Checking status of 47.97.3.136:9999
+2018-11-20 16:29:33  [ cluster-ClusterId{value='5bf3c5ec6c0b767ec804292c', description='null'}-47.97.3.136:9999:1493 ] - [ INFO ]  Monitor thread successfully connected to server with description ServerDescription{address=47.97.3.136:9999, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 13]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=29563440}
+2018-11-20 16:29:33  [ cluster-ClusterId{value='5bf3c5ec6c0b767ec804292c', description='null'}-47.97.3.136:9999:1495 ] - [ INFO ]  Discovered cluster type of STANDALONE
+2018-11-20 16:29:33  [ cluster-ClusterId{value='5bf3c5ec6c0b767ec804292c', description='null'}-47.97.3.136:9999:1497 ] - [ DEBUG ]  Updating cluster description to  {type=STANDALONE, servers=[{address=47.97.3.136:9999, type=STANDALONE, roundTripTime=29.6 ms, state=CONNECTED}]
+2018-11-20 16:29:34  [ main:1748 ] - [ INFO ]  Opened connection [connectionId{localValue:2, serverValue:13}] to 47.97.3.136:9999
+2018-11-20 16:29:34  [ main:1763 ] - [ DEBUG ]  Sending command {find : BsonString{value='bill_cdr_query_cc'}} to database sj_data on connection [connectionId{localValue:2, serverValue:13}] to server 47.97.3.136:9999
+2018-11-20 16:29:34  [ main:1964 ] - [ DEBUG ]  Command execution completed
+2018-11-20 16:29:34  [ main:1983 ] - [ DEBUG ]  Sending command {getMore : BsonInt64{value=515208937570}} to database sj_data on connection [connectionId{localValue:2, serverValue:13}] to server 47.97.3.136:9999
+2018-11-20 16:30:25  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:91999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:30:25  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.136:91999 to client view of cluster
+2018-11-20 16:30:25  [ main:56 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:30:25  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:64 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:30:25  [ main:68 ] - [ INFO ]  数据库成功链接
+2018-11-20 16:30:25  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:69 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.136:91999
+com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:125)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: port out of range:91999
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143)
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:188)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	... 2 more
+2018-11-20 16:30:25  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:72 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]
+2018-11-20 16:30:25  [ main:85 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:30:26  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:572 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:30:26  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:1073 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:30:27  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:1574 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:30:27  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:2075 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:30:28  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:2575 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:30:28  [ cluster-ClusterId{value='5bf3c6216c0b766b309ff9d2', description='null'}-47.97.3.136:91999:3076 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:31:05  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:91999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:31:05  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.136:91999 to client view of cluster
+2018-11-20 16:31:05  [ main:65 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:31:05  [ cluster-ClusterId{value='5bf3c6496c0b766dbce33c9a', description='null'}-47.97.3.136:91999:77 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:31:05  [ cluster-ClusterId{value='5bf3c6496c0b766dbce33c9a', description='null'}-47.97.3.136:91999:82 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.136:91999
+com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:125)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: port out of range:91999
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143)
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:188)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	... 2 more
+2018-11-20 16:31:05  [ main:82 ] - [ INFO ]  数据库成功链接
+2018-11-20 16:31:05  [ cluster-ClusterId{value='5bf3c6496c0b766dbce33c9a', description='null'}-47.97.3.136:91999:85 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]
+2018-11-20 16:31:05  [ main:101 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:31:06  [ cluster-ClusterId{value='5bf3c6496c0b766dbce33c9a', description='null'}-47.97.3.136:91999:587 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:31:06  [ cluster-ClusterId{value='5bf3c6496c0b766dbce33c9a', description='null'}-47.97.3.136:91999:1088 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:31:07  [ cluster-ClusterId{value='5bf3c6496c0b766dbce33c9a', description='null'}-47.97.3.136:91999:1589 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:31:07  [ cluster-ClusterId{value='5bf3c6496c0b766dbce33c9a', description='null'}-47.97.3.136:91999:2091 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:33:40  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:91999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:33:40  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.136:91999 to client view of cluster
+2018-11-20 16:33:41  [ main:64 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:33:41  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:76 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:33:41  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:80 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.136:91999
+com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:125)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: port out of range:91999
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143)
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:188)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	... 2 more
+2018-11-20 16:33:41  [ main:81 ] - [ INFO ]  数据库成功链接
+2018-11-20 16:33:41  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:83 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]
+2018-11-20 16:33:41  [ main:99 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:33:41  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:585 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:33:42  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:1086 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:33:42  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:1588 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:33:43  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:2089 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:33:43  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:2592 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:33:44  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:3093 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:33:44  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:3594 ] - [ DEBUG ]  Closing connection connectionId{localValue:8}
+2018-11-20 16:33:45  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:4095 ] - [ DEBUG ]  Closing connection connectionId{localValue:9}
+2018-11-20 16:33:45  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:4596 ] - [ DEBUG ]  Closing connection connectionId{localValue:10}
+2018-11-20 16:33:46  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:5098 ] - [ DEBUG ]  Closing connection connectionId{localValue:11}
+2018-11-20 16:33:46  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:5599 ] - [ DEBUG ]  Closing connection connectionId{localValue:12}
+2018-11-20 16:33:47  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:6101 ] - [ DEBUG ]  Closing connection connectionId{localValue:13}
+2018-11-20 16:33:47  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:6601 ] - [ DEBUG ]  Closing connection connectionId{localValue:14}
+2018-11-20 16:33:48  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:7103 ] - [ DEBUG ]  Closing connection connectionId{localValue:15}
+2018-11-20 16:33:48  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:7604 ] - [ DEBUG ]  Closing connection connectionId{localValue:16}
+2018-11-20 16:33:49  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:8105 ] - [ DEBUG ]  Closing connection connectionId{localValue:17}
+2018-11-20 16:33:49  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:8606 ] - [ DEBUG ]  Closing connection connectionId{localValue:18}
+2018-11-20 16:33:50  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:9107 ] - [ DEBUG ]  Closing connection connectionId{localValue:19}
+2018-11-20 16:33:50  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:9608 ] - [ DEBUG ]  Closing connection connectionId{localValue:20}
+2018-11-20 16:33:51  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:10109 ] - [ DEBUG ]  Closing connection connectionId{localValue:21}
+2018-11-20 16:33:51  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:10611 ] - [ DEBUG ]  Closing connection connectionId{localValue:22}
+2018-11-20 16:33:52  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:11111 ] - [ DEBUG ]  Closing connection connectionId{localValue:23}
+2018-11-20 16:33:52  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:11613 ] - [ DEBUG ]  Closing connection connectionId{localValue:24}
+2018-11-20 16:33:53  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:12114 ] - [ DEBUG ]  Closing connection connectionId{localValue:25}
+2018-11-20 16:33:53  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:12614 ] - [ DEBUG ]  Closing connection connectionId{localValue:26}
+2018-11-20 16:33:54  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:13116 ] - [ DEBUG ]  Closing connection connectionId{localValue:27}
+2018-11-20 16:33:54  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:13617 ] - [ DEBUG ]  Closing connection connectionId{localValue:28}
+2018-11-20 16:33:55  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:14119 ] - [ DEBUG ]  Closing connection connectionId{localValue:29}
+2018-11-20 16:33:55  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:14621 ] - [ DEBUG ]  Closing connection connectionId{localValue:30}
+2018-11-20 16:33:56  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:15123 ] - [ DEBUG ]  Closing connection connectionId{localValue:31}
+2018-11-20 16:33:56  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:15624 ] - [ DEBUG ]  Closing connection connectionId{localValue:32}
+2018-11-20 16:33:57  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:16126 ] - [ DEBUG ]  Closing connection connectionId{localValue:33}
+2018-11-20 16:33:57  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:16636 ] - [ DEBUG ]  Closing connection connectionId{localValue:34}
+2018-11-20 16:33:58  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:17136 ] - [ DEBUG ]  Closing connection connectionId{localValue:35}
+2018-11-20 16:33:58  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:17638 ] - [ DEBUG ]  Closing connection connectionId{localValue:36}
+2018-11-20 16:33:59  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:18141 ] - [ DEBUG ]  Closing connection connectionId{localValue:37}
+2018-11-20 16:33:59  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:18642 ] - [ DEBUG ]  Closing connection connectionId{localValue:38}
+2018-11-20 16:34:00  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:19143 ] - [ DEBUG ]  Closing connection connectionId{localValue:39}
+2018-11-20 16:34:00  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:19644 ] - [ DEBUG ]  Closing connection connectionId{localValue:40}
+2018-11-20 16:34:01  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:20145 ] - [ DEBUG ]  Closing connection connectionId{localValue:41}
+2018-11-20 16:34:01  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:20650 ] - [ DEBUG ]  Closing connection connectionId{localValue:42}
+2018-11-20 16:34:02  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:21150 ] - [ DEBUG ]  Closing connection connectionId{localValue:43}
+2018-11-20 16:34:02  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:21651 ] - [ DEBUG ]  Closing connection connectionId{localValue:44}
+2018-11-20 16:34:03  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:22154 ] - [ DEBUG ]  Closing connection connectionId{localValue:45}
+2018-11-20 16:34:03  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:22655 ] - [ DEBUG ]  Closing connection connectionId{localValue:46}
+2018-11-20 16:34:04  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:23156 ] - [ DEBUG ]  Closing connection connectionId{localValue:47}
+2018-11-20 16:34:04  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:23658 ] - [ DEBUG ]  Closing connection connectionId{localValue:48}
+2018-11-20 16:34:05  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:24160 ] - [ DEBUG ]  Closing connection connectionId{localValue:49}
+2018-11-20 16:34:05  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:24660 ] - [ DEBUG ]  Closing connection connectionId{localValue:50}
+2018-11-20 16:34:06  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:25161 ] - [ DEBUG ]  Closing connection connectionId{localValue:51}
+2018-11-20 16:34:06  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:25663 ] - [ DEBUG ]  Closing connection connectionId{localValue:52}
+2018-11-20 16:34:07  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:26163 ] - [ DEBUG ]  Closing connection connectionId{localValue:53}
+2018-11-20 16:34:07  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:26662 ] - [ DEBUG ]  Closing connection connectionId{localValue:54}
+2018-11-20 16:34:08  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:27163 ] - [ DEBUG ]  Closing connection connectionId{localValue:55}
+2018-11-20 16:34:08  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:27663 ] - [ DEBUG ]  Closing connection connectionId{localValue:56}
+2018-11-20 16:34:09  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:28164 ] - [ DEBUG ]  Closing connection connectionId{localValue:57}
+2018-11-20 16:34:09  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:28664 ] - [ DEBUG ]  Closing connection connectionId{localValue:58}
+2018-11-20 16:34:10  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:29164 ] - [ DEBUG ]  Closing connection connectionId{localValue:59}
+2018-11-20 16:34:10  [ cluster-ClusterId{value='5bf3c6e46c0b766fd062479d', description='null'}-47.97.3.136:91999:29667 ] - [ DEBUG ]  Closing connection connectionId{localValue:60}
+2018-11-20 16:34:17  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:91999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:34:17  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.136:91999 to client view of cluster
+2018-11-20 16:34:17  [ main:61 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:34:17  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:71 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:34:17  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:75 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.136:91999
+com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:125)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: port out of range:91999
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143)
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:188)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	... 2 more
+2018-11-20 16:34:17  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:77 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]
+2018-11-20 16:34:17  [ main:92 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:34:18  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:577 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:34:18  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:1080 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:34:19  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:1582 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:34:19  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:2083 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:34:20  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:2585 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:34:20  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:3086 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:34:21  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:3589 ] - [ DEBUG ]  Closing connection connectionId{localValue:8}
+2018-11-20 16:34:21  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:4091 ] - [ DEBUG ]  Closing connection connectionId{localValue:9}
+2018-11-20 16:34:22  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:4592 ] - [ DEBUG ]  Closing connection connectionId{localValue:10}
+2018-11-20 16:34:22  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:5093 ] - [ DEBUG ]  Closing connection connectionId{localValue:11}
+2018-11-20 16:34:23  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:5595 ] - [ DEBUG ]  Closing connection connectionId{localValue:12}
+2018-11-20 16:34:23  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:6096 ] - [ DEBUG ]  Closing connection connectionId{localValue:13}
+2018-11-20 16:34:24  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:6597 ] - [ DEBUG ]  Closing connection connectionId{localValue:14}
+2018-11-20 16:34:24  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:7098 ] - [ DEBUG ]  Closing connection connectionId{localValue:15}
+2018-11-20 16:34:25  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:7600 ] - [ DEBUG ]  Closing connection connectionId{localValue:16}
+2018-11-20 16:34:25  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:8101 ] - [ DEBUG ]  Closing connection connectionId{localValue:17}
+2018-11-20 16:34:26  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:8603 ] - [ DEBUG ]  Closing connection connectionId{localValue:18}
+2018-11-20 16:34:26  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:9104 ] - [ DEBUG ]  Closing connection connectionId{localValue:19}
+2018-11-20 16:34:27  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:9605 ] - [ DEBUG ]  Closing connection connectionId{localValue:20}
+2018-11-20 16:34:27  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:10108 ] - [ DEBUG ]  Closing connection connectionId{localValue:21}
+2018-11-20 16:34:28  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:10609 ] - [ DEBUG ]  Closing connection connectionId{localValue:22}
+2018-11-20 16:34:28  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:11110 ] - [ DEBUG ]  Closing connection connectionId{localValue:23}
+2018-11-20 16:34:29  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:11611 ] - [ DEBUG ]  Closing connection connectionId{localValue:24}
+2018-11-20 16:34:29  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:12113 ] - [ DEBUG ]  Closing connection connectionId{localValue:25}
+2018-11-20 16:34:30  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:12614 ] - [ DEBUG ]  Closing connection connectionId{localValue:26}
+2018-11-20 16:34:30  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:13115 ] - [ DEBUG ]  Closing connection connectionId{localValue:27}
+2018-11-20 16:34:31  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:13616 ] - [ DEBUG ]  Closing connection connectionId{localValue:28}
+2018-11-20 16:34:31  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:14116 ] - [ DEBUG ]  Closing connection connectionId{localValue:29}
+2018-11-20 16:34:32  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:14617 ] - [ DEBUG ]  Closing connection connectionId{localValue:30}
+2018-11-20 16:34:32  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:15117 ] - [ DEBUG ]  Closing connection connectionId{localValue:31}
+2018-11-20 16:34:33  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:15618 ] - [ DEBUG ]  Closing connection connectionId{localValue:32}
+2018-11-20 16:34:33  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:16120 ] - [ DEBUG ]  Closing connection connectionId{localValue:33}
+2018-11-20 16:34:34  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:16622 ] - [ DEBUG ]  Closing connection connectionId{localValue:34}
+2018-11-20 16:34:34  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:17130 ] - [ DEBUG ]  Closing connection connectionId{localValue:35}
+2018-11-20 16:34:35  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:17631 ] - [ DEBUG ]  Closing connection connectionId{localValue:36}
+2018-11-20 16:34:35  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:18133 ] - [ DEBUG ]  Closing connection connectionId{localValue:37}
+2018-11-20 16:34:36  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:18635 ] - [ DEBUG ]  Closing connection connectionId{localValue:38}
+2018-11-20 16:34:36  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:19136 ] - [ DEBUG ]  Closing connection connectionId{localValue:39}
+2018-11-20 16:34:37  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:19636 ] - [ DEBUG ]  Closing connection connectionId{localValue:40}
+2018-11-20 16:34:37  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:20137 ] - [ DEBUG ]  Closing connection connectionId{localValue:41}
+2018-11-20 16:34:38  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:20636 ] - [ DEBUG ]  Closing connection connectionId{localValue:42}
+2018-11-20 16:34:38  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:21138 ] - [ DEBUG ]  Closing connection connectionId{localValue:43}
+2018-11-20 16:34:39  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:21640 ] - [ DEBUG ]  Closing connection connectionId{localValue:44}
+2018-11-20 16:34:39  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:22140 ] - [ DEBUG ]  Closing connection connectionId{localValue:45}
+2018-11-20 16:34:40  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:22641 ] - [ DEBUG ]  Closing connection connectionId{localValue:46}
+2018-11-20 16:34:40  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:23142 ] - [ DEBUG ]  Closing connection connectionId{localValue:47}
+2018-11-20 16:34:41  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:23642 ] - [ DEBUG ]  Closing connection connectionId{localValue:48}
+2018-11-20 16:34:41  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:24143 ] - [ DEBUG ]  Closing connection connectionId{localValue:49}
+2018-11-20 16:34:42  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:24642 ] - [ DEBUG ]  Closing connection connectionId{localValue:50}
+2018-11-20 16:34:42  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:25143 ] - [ DEBUG ]  Closing connection connectionId{localValue:51}
+2018-11-20 16:34:43  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:25645 ] - [ DEBUG ]  Closing connection connectionId{localValue:52}
+2018-11-20 16:34:43  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:26147 ] - [ DEBUG ]  Closing connection connectionId{localValue:53}
+2018-11-20 16:34:44  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:26649 ] - [ DEBUG ]  Closing connection connectionId{localValue:54}
+2018-11-20 16:34:44  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:27149 ] - [ DEBUG ]  Closing connection connectionId{localValue:55}
+2018-11-20 16:34:45  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:27651 ] - [ DEBUG ]  Closing connection connectionId{localValue:56}
+2018-11-20 16:34:45  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:28152 ] - [ DEBUG ]  Closing connection connectionId{localValue:57}
+2018-11-20 16:34:46  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:28654 ] - [ DEBUG ]  Closing connection connectionId{localValue:58}
+2018-11-20 16:34:46  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:29155 ] - [ DEBUG ]  Closing connection connectionId{localValue:59}
+2018-11-20 16:34:47  [ cluster-ClusterId{value='5bf3c7096c0b7666c08a7b5a', description='null'}-47.97.3.136:91999:29658 ] - [ DEBUG ]  Closing connection connectionId{localValue:60}
+2018-11-20 16:35:29  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:91999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:35:29  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.136:91999 to client view of cluster
+2018-11-20 16:35:29  [ main:188 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:35:29  [ cluster-ClusterId{value='5bf3c7516c0b7659681c57b0', description='null'}-47.97.3.136:91999:196 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:35:29  [ cluster-ClusterId{value='5bf3c7516c0b7659681c57b0', description='null'}-47.97.3.136:91999:199 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.136:91999
+com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:125)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: port out of range:91999
+	at java.net.InetSocketAddress.checkPort(InetSocketAddress.java:143)
+	at java.net.InetSocketAddress.<init>(InetSocketAddress.java:188)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	... 2 more
+2018-11-20 16:35:29  [ cluster-ClusterId{value='5bf3c7516c0b7659681c57b0', description='null'}-47.97.3.136:91999:206 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:91999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoException: java.lang.IllegalArgumentException: port out of range:91999}, caused by {java.lang.IllegalArgumentException: port out of range:91999}}]
+2018-11-20 16:36:04  [ cluster-ClusterId{value='5bf3c7516c0b7659681c57b0', description='null'}-47.97.3.136:91999:34812 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:36:28  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:36:28  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.136:9999 to client view of cluster
+2018-11-20 16:36:28  [ main:191 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:36:42  [ main:14209 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:36:43  [ cluster-ClusterId{value='5bf3c78c6c0b767d34d68ae6', description='null'}-47.97.3.136:9999:14923 ] - [ INFO ]  Opened connection [connectionId{localValue:1, serverValue:20}] to 47.97.3.136:9999
+2018-11-20 16:36:43  [ cluster-ClusterId{value='5bf3c78c6c0b767d34d68ae6', description='null'}-47.97.3.136:9999:14923 ] - [ DEBUG ]  Checking status of 47.97.3.136:9999
+2018-11-20 16:36:43  [ cluster-ClusterId{value='5bf3c78c6c0b767d34d68ae6', description='null'}-47.97.3.136:9999:14955 ] - [ INFO ]  Monitor thread successfully connected to server with description ServerDescription{address=47.97.3.136:9999, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 13]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=32019333}
+2018-11-20 16:36:43  [ cluster-ClusterId{value='5bf3c78c6c0b767d34d68ae6', description='null'}-47.97.3.136:9999:14957 ] - [ INFO ]  Discovered cluster type of STANDALONE
+2018-11-20 16:36:43  [ cluster-ClusterId{value='5bf3c78c6c0b767d34d68ae6', description='null'}-47.97.3.136:9999:14959 ] - [ DEBUG ]  Updating cluster description to  {type=STANDALONE, servers=[{address=47.97.3.136:9999, type=STANDALONE, roundTripTime=32.0 ms, state=CONNECTED}]
+2018-11-20 16:36:43  [ main:15178 ] - [ INFO ]  Opened connection [connectionId{localValue:2, serverValue:21}] to 47.97.3.136:9999
+2018-11-20 16:36:43  [ main:15184 ] - [ DEBUG ]  Sending command {find : BsonString{value='bill_cdr_query_cc'}} to database sj_data on connection [connectionId{localValue:2, serverValue:21}] to server 47.97.3.136:9999
+2018-11-20 16:36:43  [ main:15379 ] - [ DEBUG ]  Command execution completed
+2018-11-20 16:36:43  [ main:15403 ] - [ DEBUG ]  Sending command {getMore : BsonInt64{value=511959553633}} to database sj_data on connection [connectionId{localValue:2, serverValue:21}] to server 47.97.3.136:9999
+2018-11-20 16:37:06  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:37:06  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.136:9999 to client view of cluster
+2018-11-20 16:37:06  [ main:75 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:37:56  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:37:56  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.136:9999 to client view of cluster
+2018-11-20 16:37:56  [ main:198 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:38:37  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:19999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:38:37  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.136:19999 to client view of cluster
+2018-11-20 16:38:38  [ main:186 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:19999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:38:55  [ cluster-ClusterId{value='5bf3c80d6c0b767d1c72e683', description='null'}-47.97.3.136:19999:17661 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:38:55  [ cluster-ClusterId{value='5bf3c80d6c0b767d1c72e683', description='null'}-47.97.3.136:19999:17661 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:38:55  [ cluster-ClusterId{value='5bf3c80d6c0b767d1c72e683', description='null'}-47.97.3.136:19999:17664 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.136:19999
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:480)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:225)
+	at com.mongodb.connection.CommandHelper.receiveReply(CommandHelper.java:134)
+	at com.mongodb.connection.CommandHelper.receiveCommandResult(CommandHelper.java:121)
+	at com.mongodb.connection.CommandHelper.executeCommand(CommandHelper.java:32)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:83)
+	at com.mongodb.connection.InternalStreamConnectionInitializer.initialize(InternalStreamConnectionInitializer.java:43)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:115)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mongodb.connection.SocketStream.read(SocketStream.java:85)
+	at com.mongodb.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:491)
+	at com.mongodb.connection.InternalStreamConnection.receiveMessage(InternalStreamConnection.java:221)
+	... 8 more
+2018-11-20 16:39:37  [ cluster-ClusterId{value='5bf3c80d6c0b767d1c72e683', description='null'}-47.97.3.136:19999:59371 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:19999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadException: Exception receiving message}, caused by {java.net.SocketException: Connection reset}}]
+2018-11-20 16:39:43  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:19999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:39:43  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.1316:19999 to client view of cluster
+2018-11-20 16:39:43  [ main:77 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:19999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:39:44  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:93 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:39:44  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:95 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:19999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:39:44  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:100 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:19999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:39:44  [ main:134 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.1316:19999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:39:44  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:602 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:39:45  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:1103 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:39:45  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:1603 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:39:46  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:2105 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:39:46  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:2606 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:39:47  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:3106 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:39:47  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:3607 ] - [ DEBUG ]  Closing connection connectionId{localValue:8}
+2018-11-20 16:39:48  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:4109 ] - [ DEBUG ]  Closing connection connectionId{localValue:9}
+2018-11-20 16:39:48  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:4610 ] - [ DEBUG ]  Closing connection connectionId{localValue:10}
+2018-11-20 16:39:49  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:5112 ] - [ DEBUG ]  Closing connection connectionId{localValue:11}
+2018-11-20 16:39:49  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:5612 ] - [ DEBUG ]  Closing connection connectionId{localValue:12}
+2018-11-20 16:39:50  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:6113 ] - [ DEBUG ]  Closing connection connectionId{localValue:13}
+2018-11-20 16:39:50  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:6614 ] - [ DEBUG ]  Closing connection connectionId{localValue:14}
+2018-11-20 16:39:51  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:7115 ] - [ DEBUG ]  Closing connection connectionId{localValue:15}
+2018-11-20 16:39:51  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:7615 ] - [ DEBUG ]  Closing connection connectionId{localValue:16}
+2018-11-20 16:39:52  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:8115 ] - [ DEBUG ]  Closing connection connectionId{localValue:17}
+2018-11-20 16:39:52  [ cluster-ClusterId{value='5bf3c84f6c0b766ce8950a3b', description='null'}-47.97.3.1316:19999:8618 ] - [ DEBUG ]  Closing connection connectionId{localValue:18}
+2018-11-20 16:45:37  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:19999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:45:37  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.1316:19999 to client view of cluster
+2018-11-20 16:45:37  [ main:182 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:19999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:45:37  [ cluster-ClusterId{value='5bf3c9b16c0b766fd0250b8d', description='null'}-47.97.3.1316:19999:195 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:45:37  [ cluster-ClusterId{value='5bf3c9b16c0b766fd0250b8d', description='null'}-47.97.3.1316:19999:199 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:19999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:45:37  [ cluster-ClusterId{value='5bf3c9b16c0b766fd0250b8d', description='null'}-47.97.3.1316:19999:206 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:19999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:46:15  [ cluster-ClusterId{value='5bf3c9b16c0b766fd0250b8d', description='null'}-47.97.3.1316:19999:37410 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:46:41  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:46:41  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.136:9999 to client view of cluster
+2018-11-20 16:46:41  [ main:202 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:47:06  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:47:06  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.136:9999 to client view of cluster
+2018-11-20 16:47:06  [ main:76 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:49:04  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.136:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:49:04  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.136:9999 to client view of cluster
+2018-11-20 16:49:04  [ main:77 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:49:04  [ main:107 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.136:9999, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:49:04  [ cluster-ClusterId{value='5bf3ca806c0b761844fc1fa8', description='null'}-47.97.3.136:9999:856 ] - [ INFO ]  Opened connection [connectionId{localValue:1, serverValue:34}] to 47.97.3.136:9999
+2018-11-20 16:49:04  [ cluster-ClusterId{value='5bf3ca806c0b761844fc1fa8', description='null'}-47.97.3.136:9999:856 ] - [ DEBUG ]  Checking status of 47.97.3.136:9999
+2018-11-20 16:49:04  [ cluster-ClusterId{value='5bf3ca806c0b761844fc1fa8', description='null'}-47.97.3.136:9999:887 ] - [ INFO ]  Monitor thread successfully connected to server with description ServerDescription{address=47.97.3.136:9999, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 13]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=30378658}
+2018-11-20 16:49:04  [ cluster-ClusterId{value='5bf3ca806c0b761844fc1fa8', description='null'}-47.97.3.136:9999:887 ] - [ INFO ]  Discovered cluster type of STANDALONE
+2018-11-20 16:49:04  [ cluster-ClusterId{value='5bf3ca806c0b761844fc1fa8', description='null'}-47.97.3.136:9999:888 ] - [ DEBUG ]  Updating cluster description to  {type=STANDALONE, servers=[{address=47.97.3.136:9999, type=STANDALONE, roundTripTime=30.4 ms, state=CONNECTED}]
+2018-11-20 16:49:05  [ main:1137 ] - [ INFO ]  Opened connection [connectionId{localValue:2, serverValue:35}] to 47.97.3.136:9999
+2018-11-20 16:49:05  [ main:1143 ] - [ DEBUG ]  Sending command {find : BsonString{value='bill_cdr_query_cc'}} to database sj_data on connection [connectionId{localValue:2, serverValue:35}] to server 47.97.3.136:9999
+2018-11-20 16:49:05  [ main:1334 ] - [ DEBUG ]  Command execution completed
+2018-11-20 16:49:05  [ main:1349 ] - [ DEBUG ]  Sending command {getMore : BsonInt64{value=514279050274}} to database sj_data on connection [connectionId{localValue:2, serverValue:35}] to server 47.97.3.136:9999
+2018-11-20 16:49:12  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:49:12  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.1316:9999 to client view of cluster
+2018-11-20 16:49:12  [ main:59 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:49:12  [ cluster-ClusterId{value='5bf3ca886c0b767854b399e4', description='null'}-47.97.3.1316:9999:72 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:49:12  [ cluster-ClusterId{value='5bf3ca886c0b767854b399e4', description='null'}-47.97.3.1316:9999:73 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:9999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:49:12  [ cluster-ClusterId{value='5bf3ca886c0b767854b399e4', description='null'}-47.97.3.1316:9999:76 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:49:12  [ main:89 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:49:12  [ cluster-ClusterId{value='5bf3ca886c0b767854b399e4', description='null'}-47.97.3.1316:9999:578 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:49:13  [ cluster-ClusterId{value='5bf3ca886c0b767854b399e4', description='null'}-47.97.3.1316:9999:1080 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:49:13  [ cluster-ClusterId{value='5bf3ca886c0b767854b399e4', description='null'}-47.97.3.1316:9999:1581 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:49:14  [ cluster-ClusterId{value='5bf3ca886c0b767854b399e4', description='null'}-47.97.3.1316:9999:2081 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:49:14  [ cluster-ClusterId{value='5bf3ca886c0b767854b399e4', description='null'}-47.97.3.1316:9999:2582 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:50:31  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:50:31  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.1316:9999 to client view of cluster
+2018-11-20 16:50:31  [ main:65 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:50:31  [ cluster-ClusterId{value='5bf3cad76c0b7678ccb47bc2', description='null'}-47.97.3.1316:9999:77 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:50:31  [ cluster-ClusterId{value='5bf3cad76c0b7678ccb47bc2', description='null'}-47.97.3.1316:9999:79 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:9999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:50:31  [ cluster-ClusterId{value='5bf3cad76c0b7678ccb47bc2', description='null'}-47.97.3.1316:9999:82 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:50:31  [ main:94 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:50:32  [ cluster-ClusterId{value='5bf3cad76c0b7678ccb47bc2', description='null'}-47.97.3.1316:9999:583 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:50:32  [ cluster-ClusterId{value='5bf3cad76c0b7678ccb47bc2', description='null'}-47.97.3.1316:9999:1083 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:50:33  [ cluster-ClusterId{value='5bf3cad76c0b7678ccb47bc2', description='null'}-47.97.3.1316:9999:1585 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:50:51  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:50:51  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.1316:9999 to client view of cluster
+2018-11-20 16:50:51  [ main:74 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:50:51  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:87 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:50:51  [ main:88 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:50:51  [ main:89 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:50:51  [ main:89 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:50:51  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:91 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:9999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:50:51  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:95 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:50:51  [ main:110 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:50:51  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:596 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:50:52  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:1097 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:50:52  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:1599 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:50:53  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:2099 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:50:53  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:2601 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:50:54  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:3101 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:50:54  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:3601 ] - [ DEBUG ]  Closing connection connectionId{localValue:8}
+2018-11-20 16:50:55  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:4103 ] - [ DEBUG ]  Closing connection connectionId{localValue:9}
+2018-11-20 16:50:55  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:4604 ] - [ DEBUG ]  Closing connection connectionId{localValue:10}
+2018-11-20 16:50:56  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:5104 ] - [ DEBUG ]  Closing connection connectionId{localValue:11}
+2018-11-20 16:50:56  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:5605 ] - [ DEBUG ]  Closing connection connectionId{localValue:12}
+2018-11-20 16:50:57  [ cluster-ClusterId{value='5bf3caeb6c0b761830f4682a', description='null'}-47.97.3.1316:9999:6107 ] - [ DEBUG ]  Closing connection connectionId{localValue:13}
+2018-11-20 16:53:02  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:53:02  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.1316:9999 to client view of cluster
+2018-11-20 16:53:02  [ main:79 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:53:02  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:94 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:53:02  [ main:94 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:53:02  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:95 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:9999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:53:02  [ main:97 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:53:02  [ main:99 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:53:02  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:100 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:53:02  [ main:116 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:53:03  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:601 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:53:03  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:1102 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:53:04  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:1602 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:53:04  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:2102 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:53:05  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:2604 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:53:05  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:3105 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:53:06  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:3605 ] - [ DEBUG ]  Closing connection connectionId{localValue:8}
+2018-11-20 16:53:06  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:4105 ] - [ DEBUG ]  Closing connection connectionId{localValue:9}
+2018-11-20 16:53:07  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:4606 ] - [ DEBUG ]  Closing connection connectionId{localValue:10}
+2018-11-20 16:53:07  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:5106 ] - [ DEBUG ]  Closing connection connectionId{localValue:11}
+2018-11-20 16:53:08  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:5607 ] - [ DEBUG ]  Closing connection connectionId{localValue:12}
+2018-11-20 16:53:08  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:6108 ] - [ DEBUG ]  Closing connection connectionId{localValue:13}
+2018-11-20 16:53:09  [ cluster-ClusterId{value='5bf3cb6e6c0b765eb85e3d99', description='null'}-47.97.3.1316:9999:6622 ] - [ DEBUG ]  Closing connection connectionId{localValue:14}
+2018-11-20 16:53:51  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:53:51  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.1316:9999 to client view of cluster
+2018-11-20 16:53:51  [ main:61 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:53:51  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:74 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:53:51  [ main:74 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:53:51  [ main:74 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:53:51  [ main:74 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:53:51  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:75 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:9999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:53:51  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:78 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:53:51  [ main:91 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:53:52  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:579 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:53:52  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:1081 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:53:53  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:1581 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:53:53  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:2082 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:53:54  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:2584 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:53:54  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:3086 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:53:55  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:3587 ] - [ DEBUG ]  Closing connection connectionId{localValue:8}
+2018-11-20 16:53:55  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:4088 ] - [ DEBUG ]  Closing connection connectionId{localValue:9}
+2018-11-20 16:53:56  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:4589 ] - [ DEBUG ]  Closing connection connectionId{localValue:10}
+2018-11-20 16:53:56  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:5091 ] - [ DEBUG ]  Closing connection connectionId{localValue:11}
+2018-11-20 16:53:57  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:5592 ] - [ DEBUG ]  Closing connection connectionId{localValue:12}
+2018-11-20 16:53:57  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:6094 ] - [ DEBUG ]  Closing connection connectionId{localValue:13}
+2018-11-20 16:53:58  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:6607 ] - [ DEBUG ]  Closing connection connectionId{localValue:14}
+2018-11-20 16:53:58  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:7110 ] - [ DEBUG ]  Closing connection connectionId{localValue:15}
+2018-11-20 16:53:59  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:7611 ] - [ DEBUG ]  Closing connection connectionId{localValue:16}
+2018-11-20 16:53:59  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:8111 ] - [ DEBUG ]  Closing connection connectionId{localValue:17}
+2018-11-20 16:54:00  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:8612 ] - [ DEBUG ]  Closing connection connectionId{localValue:18}
+2018-11-20 16:54:00  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:9114 ] - [ DEBUG ]  Closing connection connectionId{localValue:19}
+2018-11-20 16:54:01  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:9615 ] - [ DEBUG ]  Closing connection connectionId{localValue:20}
+2018-11-20 16:54:01  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:10117 ] - [ DEBUG ]  Closing connection connectionId{localValue:21}
+2018-11-20 16:54:02  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:10617 ] - [ DEBUG ]  Closing connection connectionId{localValue:22}
+2018-11-20 16:54:02  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:11118 ] - [ DEBUG ]  Closing connection connectionId{localValue:23}
+2018-11-20 16:54:03  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:11618 ] - [ DEBUG ]  Closing connection connectionId{localValue:24}
+2018-11-20 16:54:03  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:12118 ] - [ DEBUG ]  Closing connection connectionId{localValue:25}
+2018-11-20 16:54:04  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:12619 ] - [ DEBUG ]  Closing connection connectionId{localValue:26}
+2018-11-20 16:54:04  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:13119 ] - [ DEBUG ]  Closing connection connectionId{localValue:27}
+2018-11-20 16:54:05  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:13622 ] - [ DEBUG ]  Closing connection connectionId{localValue:28}
+2018-11-20 16:54:05  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:14124 ] - [ DEBUG ]  Closing connection connectionId{localValue:29}
+2018-11-20 16:54:06  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:14625 ] - [ DEBUG ]  Closing connection connectionId{localValue:30}
+2018-11-20 16:54:06  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:15125 ] - [ DEBUG ]  Closing connection connectionId{localValue:31}
+2018-11-20 16:54:07  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:15627 ] - [ DEBUG ]  Closing connection connectionId{localValue:32}
+2018-11-20 16:54:07  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:16127 ] - [ DEBUG ]  Closing connection connectionId{localValue:33}
+2018-11-20 16:54:08  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:16627 ] - [ DEBUG ]  Closing connection connectionId{localValue:34}
+2018-11-20 16:54:08  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:17129 ] - [ DEBUG ]  Closing connection connectionId{localValue:35}
+2018-11-20 16:54:09  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:17630 ] - [ DEBUG ]  Closing connection connectionId{localValue:36}
+2018-11-20 16:54:09  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:18132 ] - [ DEBUG ]  Closing connection connectionId{localValue:37}
+2018-11-20 16:54:10  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:18634 ] - [ DEBUG ]  Closing connection connectionId{localValue:38}
+2018-11-20 16:54:10  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:19134 ] - [ DEBUG ]  Closing connection connectionId{localValue:39}
+2018-11-20 16:54:11  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:19637 ] - [ DEBUG ]  Closing connection connectionId{localValue:40}
+2018-11-20 16:54:11  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:20139 ] - [ DEBUG ]  Closing connection connectionId{localValue:41}
+2018-11-20 16:54:12  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:20641 ] - [ DEBUG ]  Closing connection connectionId{localValue:42}
+2018-11-20 16:54:12  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:21142 ] - [ DEBUG ]  Closing connection connectionId{localValue:43}
+2018-11-20 16:54:13  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:21641 ] - [ DEBUG ]  Closing connection connectionId{localValue:44}
+2018-11-20 16:54:13  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:22143 ] - [ DEBUG ]  Closing connection connectionId{localValue:45}
+2018-11-20 16:54:14  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:22644 ] - [ DEBUG ]  Closing connection connectionId{localValue:46}
+2018-11-20 16:54:14  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:23143 ] - [ DEBUG ]  Closing connection connectionId{localValue:47}
+2018-11-20 16:54:15  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:23644 ] - [ DEBUG ]  Closing connection connectionId{localValue:48}
+2018-11-20 16:54:15  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:24145 ] - [ DEBUG ]  Closing connection connectionId{localValue:49}
+2018-11-20 16:54:16  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:24647 ] - [ DEBUG ]  Closing connection connectionId{localValue:50}
+2018-11-20 16:54:16  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:25147 ] - [ DEBUG ]  Closing connection connectionId{localValue:51}
+2018-11-20 16:54:17  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:25648 ] - [ DEBUG ]  Closing connection connectionId{localValue:52}
+2018-11-20 16:54:17  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:26149 ] - [ DEBUG ]  Closing connection connectionId{localValue:53}
+2018-11-20 16:54:18  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:26649 ] - [ DEBUG ]  Closing connection connectionId{localValue:54}
+2018-11-20 16:54:18  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:27151 ] - [ DEBUG ]  Closing connection connectionId{localValue:55}
+2018-11-20 16:54:19  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:27653 ] - [ DEBUG ]  Closing connection connectionId{localValue:56}
+2018-11-20 16:54:19  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:28155 ] - [ DEBUG ]  Closing connection connectionId{localValue:57}
+2018-11-20 16:54:20  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:28655 ] - [ DEBUG ]  Closing connection connectionId{localValue:58}
+2018-11-20 16:54:20  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:29156 ] - [ DEBUG ]  Closing connection connectionId{localValue:59}
+2018-11-20 16:54:21  [ cluster-ClusterId{value='5bf3cb9f6c0b767d58a9569c', description='null'}-47.97.3.1316:9999:29658 ] - [ DEBUG ]  Closing connection connectionId{localValue:60}
+2018-11-20 16:54:32  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:54:32  [ main:0 ] - [ INFO ]  Adding discovered server 47.97.3.1316:9999 to client view of cluster
+2018-11-20 16:54:32  [ main:59 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:54:32  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:74 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:54:32  [ main:74 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:54:32  [ main:75 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:54:32  [ main:75 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:54:32  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:76 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:9999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:54:32  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:79 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:54:32  [ main:96 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:54:32  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:580 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:54:33  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:1081 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:54:33  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:1583 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:54:34  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:2084 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:54:34  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:2584 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:54:35  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:3085 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:54:35  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:3586 ] - [ DEBUG ]  Closing connection connectionId{localValue:8}
+2018-11-20 16:54:36  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:4087 ] - [ DEBUG ]  Closing connection connectionId{localValue:9}
+2018-11-20 16:54:36  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:4588 ] - [ DEBUG ]  Closing connection connectionId{localValue:10}
+2018-11-20 16:54:37  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:5091 ] - [ DEBUG ]  Closing connection connectionId{localValue:11}
+2018-11-20 16:54:37  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:5593 ] - [ DEBUG ]  Closing connection connectionId{localValue:12}
+2018-11-20 16:54:38  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:6095 ] - [ DEBUG ]  Closing connection connectionId{localValue:13}
+2018-11-20 16:54:38  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:6597 ] - [ DEBUG ]  Closing connection connectionId{localValue:14}
+2018-11-20 16:54:39  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:7109 ] - [ DEBUG ]  Closing connection connectionId{localValue:15}
+2018-11-20 16:54:39  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:7610 ] - [ DEBUG ]  Closing connection connectionId{localValue:16}
+2018-11-20 16:54:40  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:8113 ] - [ DEBUG ]  Closing connection connectionId{localValue:17}
+2018-11-20 16:54:40  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:8614 ] - [ DEBUG ]  Closing connection connectionId{localValue:18}
+2018-11-20 16:54:41  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:9115 ] - [ DEBUG ]  Closing connection connectionId{localValue:19}
+2018-11-20 16:54:41  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:9616 ] - [ DEBUG ]  Closing connection connectionId{localValue:20}
+2018-11-20 16:54:42  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:10120 ] - [ DEBUG ]  Closing connection connectionId{localValue:21}
+2018-11-20 16:54:42  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:10621 ] - [ DEBUG ]  Closing connection connectionId{localValue:22}
+2018-11-20 16:54:43  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:11121 ] - [ DEBUG ]  Closing connection connectionId{localValue:23}
+2018-11-20 16:54:43  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:11622 ] - [ DEBUG ]  Closing connection connectionId{localValue:24}
+2018-11-20 16:54:44  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:12122 ] - [ DEBUG ]  Closing connection connectionId{localValue:25}
+2018-11-20 16:54:44  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:12622 ] - [ DEBUG ]  Closing connection connectionId{localValue:26}
+2018-11-20 16:54:45  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:13124 ] - [ DEBUG ]  Closing connection connectionId{localValue:27}
+2018-11-20 16:54:45  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:13625 ] - [ DEBUG ]  Closing connection connectionId{localValue:28}
+2018-11-20 16:54:46  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:14127 ] - [ DEBUG ]  Closing connection connectionId{localValue:29}
+2018-11-20 16:54:46  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:14627 ] - [ DEBUG ]  Closing connection connectionId{localValue:30}
+2018-11-20 16:54:47  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:15126 ] - [ DEBUG ]  Closing connection connectionId{localValue:31}
+2018-11-20 16:54:47  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:15627 ] - [ DEBUG ]  Closing connection connectionId{localValue:32}
+2018-11-20 16:54:48  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:16128 ] - [ DEBUG ]  Closing connection connectionId{localValue:33}
+2018-11-20 16:54:48  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:16630 ] - [ DEBUG ]  Closing connection connectionId{localValue:34}
+2018-11-20 16:54:49  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:17131 ] - [ DEBUG ]  Closing connection connectionId{localValue:35}
+2018-11-20 16:54:49  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:17634 ] - [ DEBUG ]  Closing connection connectionId{localValue:36}
+2018-11-20 16:54:50  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:18137 ] - [ DEBUG ]  Closing connection connectionId{localValue:37}
+2018-11-20 16:54:50  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:18639 ] - [ DEBUG ]  Closing connection connectionId{localValue:38}
+2018-11-20 16:54:51  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:19141 ] - [ DEBUG ]  Closing connection connectionId{localValue:39}
+2018-11-20 16:54:51  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:19642 ] - [ DEBUG ]  Closing connection connectionId{localValue:40}
+2018-11-20 16:54:52  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:20143 ] - [ DEBUG ]  Closing connection connectionId{localValue:41}
+2018-11-20 16:54:52  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:20645 ] - [ DEBUG ]  Closing connection connectionId{localValue:42}
+2018-11-20 16:54:53  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:21146 ] - [ DEBUG ]  Closing connection connectionId{localValue:43}
+2018-11-20 16:54:53  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:21648 ] - [ DEBUG ]  Closing connection connectionId{localValue:44}
+2018-11-20 16:54:54  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:22150 ] - [ DEBUG ]  Closing connection connectionId{localValue:45}
+2018-11-20 16:54:54  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:22652 ] - [ DEBUG ]  Closing connection connectionId{localValue:46}
+2018-11-20 16:54:55  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:23152 ] - [ DEBUG ]  Closing connection connectionId{localValue:47}
+2018-11-20 16:54:55  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:23652 ] - [ DEBUG ]  Closing connection connectionId{localValue:48}
+2018-11-20 16:54:56  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:24153 ] - [ DEBUG ]  Closing connection connectionId{localValue:49}
+2018-11-20 16:54:56  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:24654 ] - [ DEBUG ]  Closing connection connectionId{localValue:50}
+2018-11-20 16:54:57  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:25155 ] - [ DEBUG ]  Closing connection connectionId{localValue:51}
+2018-11-20 16:54:57  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:25656 ] - [ DEBUG ]  Closing connection connectionId{localValue:52}
+2018-11-20 16:54:58  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:26157 ] - [ DEBUG ]  Closing connection connectionId{localValue:53}
+2018-11-20 16:54:58  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:26658 ] - [ DEBUG ]  Closing connection connectionId{localValue:54}
+2018-11-20 16:54:59  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:27160 ] - [ DEBUG ]  Closing connection connectionId{localValue:55}
+2018-11-20 16:54:59  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:27661 ] - [ DEBUG ]  Closing connection connectionId{localValue:56}
+2018-11-20 16:55:00  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:28161 ] - [ DEBUG ]  Closing connection connectionId{localValue:57}
+2018-11-20 16:55:00  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:28663 ] - [ DEBUG ]  Closing connection connectionId{localValue:58}
+2018-11-20 16:55:01  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:29165 ] - [ DEBUG ]  Closing connection connectionId{localValue:59}
+2018-11-20 16:55:01  [ cluster-ClusterId{value='5bf3cbc86c0b767fc0c4c4ff', description='null'}-47.97.3.1316:9999:29666 ] - [ DEBUG ]  Closing connection connectionId{localValue:60}
+2018-11-20 16:55:16  [ main:0 ] - [ INFO ]  Cluster created with settings {hosts=[47.97.3.1316:9999], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-11-20 16:55:16  [ main:1 ] - [ INFO ]  Adding discovered server 47.97.3.1316:9999 to client view of cluster
+2018-11-20 16:55:16  [ main:65 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING}]
+2018-11-20 16:55:16  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:79 ] - [ DEBUG ]  Closing connection connectionId{localValue:1}
+2018-11-20 16:55:16  [ main:79 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:55:16  [ main:80 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:55:16  [ main:80 ] - [ ERROR ]  数据库链接失败
+2018-11-20 16:55:16  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:80 ] - [ INFO ]  Exception in monitor thread while connecting to server 47.97.3.1316:9999
+com.mongodb.MongoSocketException: 47.97.3.1316
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:188)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: 47.97.3.1316
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at java.net.InetAddress.getByName(InetAddress.java:1076)
+	at com.mongodb.ServerAddress.getSocketAddress(ServerAddress.java:186)
+	... 5 more
+2018-11-20 16:55:16  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:83 ] - [ DEBUG ]  Updating cluster description to  {type=UNKNOWN, servers=[{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]
+2018-11-20 16:55:17  [ main:102 ] - [ INFO ]  No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=MULTIPLE, all=[ServerDescription{address=47.97.3.1316:9999, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketException: 47.97.3.1316}, caused by {java.net.UnknownHostException: 47.97.3.1316}}]}. Waiting for 30000 ms before timing out
+2018-11-20 16:55:17  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:584 ] - [ DEBUG ]  Closing connection connectionId{localValue:2}
+2018-11-20 16:55:18  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:1087 ] - [ DEBUG ]  Closing connection connectionId{localValue:3}
+2018-11-20 16:55:18  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:1589 ] - [ DEBUG ]  Closing connection connectionId{localValue:4}
+2018-11-20 16:55:19  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:2090 ] - [ DEBUG ]  Closing connection connectionId{localValue:5}
+2018-11-20 16:55:19  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:2592 ] - [ DEBUG ]  Closing connection connectionId{localValue:6}
+2018-11-20 16:55:20  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:3094 ] - [ DEBUG ]  Closing connection connectionId{localValue:7}
+2018-11-20 16:55:20  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:3596 ] - [ DEBUG ]  Closing connection connectionId{localValue:8}
+2018-11-20 16:55:21  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:4097 ] - [ DEBUG ]  Closing connection connectionId{localValue:9}
+2018-11-20 16:55:21  [ cluster-ClusterId{value='5bf3cbf46c0b766a0c307426', description='null'}-47.97.3.1316:9999:4598 ] - [ DEBUG ]  Closing connection connectionId{localValue:10}
